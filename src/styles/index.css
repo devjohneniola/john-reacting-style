@@ -1,0 +1,262 @@
+body {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 14px;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Raleway", sans-serif;
+}
+
+@media screen and (min-width: 560px) {
+  ::-webkit-scrollbar {
+    width: 0.75em;
+    height: 0.75em;
+  }
+  .available-routes::-webkit-scrollbar {
+    width: 0.25em;
+    height: 0.25em;
+  }
+  ::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+  }
+}
+
+.momentum-scrolling {
+  -webkit-overflow-scrolling: touch;
+}
+.mobile-scroll-hor {
+  scroll-behavior: smooth;
+  -ms-scroll-snap-type: x mandatory;
+  scroll-snap-type: x mandatory;
+}
+.scroll-align-center {
+  scroll-snap-align: center;
+}
+
+.text-bold {
+  font-weight: 900;
+}
+.busy {
+  pointer-events: none;
+  cursor: not-allowed;
+}
+.faded-40 {
+  filter: alpha(opacity=40);
+  opacity: 0.4;
+}
+
+.br-50 {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.fs-9 {
+  font-size: 9px;
+}
+.fs-10 {
+  font-size: 10px;
+}
+.fs-12 {
+  font-size: 12px;
+}
+.fs-13 {
+  font-size: 13px;
+}
+.fs-16 {
+  font-size: 16px;
+}
+.fs-24 {
+  font-size: 24px;
+}
+.fs-32 {
+  font-size: 32px;
+}
+.fs-36 {
+  font-size: 36px;
+}
+.fs-48 {
+  font-size: 48px;
+}
+.vh-center-real {
+  top: 50%;
+  left: 50%;
+}
+.vh-center {
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.flex-v-start {
+  align-self: flex-start;
+}
+.flex-v-center {
+  align-self: center;
+}
+.flex-v-end {
+  align-self: flex-end;
+}
+.flexes-v-start {
+  align-items: flex-start;
+}
+.flexes-v-center {
+  align-items: center;
+}
+.flexes-v-end {
+  align-items: flex-end;
+}
+
+.no-scroll-y {
+  overflow-y: hidden;
+}
+.no-scroll-x {
+  overflow-x: hidden;
+}
+.if-scroll-y {
+  overflow-y: auto;
+}
+.if-scroll-x {
+  overflow-x: auto;
+}
+
+.no-underline,
+.no-underline:hover {
+  text-decoration: none;
+}
+
+.max-content {
+  width: max-content;
+}
+
+img.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+@media screen and (min-width: 769px) {
+  img.overlay {
+    height: inherit;
+  }
+}
+div.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 90;
+  background-color: rgba(0, 0, 0, 0.45);
+}
+.overlay.block-scrolling {
+  position: fixed;
+  z-index: 150;
+}
+.overlay.popup {
+  position: fixed;
+  z-index: 1000;
+}
+.dialog {
+  z-index: 2000;
+  max-width: 90%;
+  max-height: 90vh;
+}
+.white-bg {
+  background-color: #ffffff;
+  color: #000000;
+}
+.smoky-white-bg {
+  background-color: #fcfcfc;
+  color: #000000;
+}
+.fivy-white-bg {
+  background-color: #f5f5f5;
+}
+.sticky-pos {
+  position: sticky;
+}
+.fixed-pos {
+  position: fixed;
+}
+.abs-pos {
+  position: absolute;
+}
+.rel-pos {
+  position: relative;
+}
+.cant-click {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+input.can-show-pass {
+  border-right: 0 !important;
+}
+button.show-password {
+  background-color: #ffffff;
+  border: 1px solid;
+  border-color: rgba(0, 0, 0, 0.25);
+  border-left: 0;
+  box-shadow: none !important;
+}
+
+input.text-field,
+.ux-txt-area {
+  border: 1px solid;
+  box-sizing: border-box;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+/* input:invalid {
+  border-color: rgba(255, 0, 0, 0.25) !important;
+} */
+input.text-field::placeholder,
+textarea::placeholder,
+input.text-field,
+.ux-txt-area {
+  border-color: rgba(0, 0, 0, 0.25) !important;
+}
+
+.width-inherit {
+  width: inherit;
+}
+.width-fill {
+  width: 100%;
+}
+.width-full {
+  width: 100vw;
+}
+.height-inherit {
+  height: inherit;
+}
+.height-full {
+  height: 100vw;
+}
+
+/* Banner */
+.ux-banner {
+  width: inherit;
+  height: inherit;
+}
+.ux-banner .info {
+  width: 80%;
+}
